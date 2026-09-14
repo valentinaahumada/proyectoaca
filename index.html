@@ -1,0 +1,164 @@
+ <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>¿Qué hago? | Guía estudiantil</title>
+
+    <!-- Conexión con CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ENCABEZADO -->
+    <header>
+        <div class="logo">
+            ¿QUÉ HAGO?
+        </div>
+
+        <p>
+            Tu guía rápida cuando no sabes a quién acudir
+        </p>
+    </header>
+
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main>
+
+        <!-- PANTALLA PRINCIPAL -->
+        <section id="inicio" class="pantalla activa">
+
+            <h1>¿Qué está pasando?</h1>
+
+            <p class="descripcion">
+                Selecciona la situación que estás viviendo
+                y te mostraremos qué puedes hacer.
+            </p>
+
+
+            <!-- OPCIONES -->
+            <div class="opciones">
+
+                <button class="opcion" onclick="mostrarSituacion('salud')">
+                    <span>🏥</span>
+                    <strong>Me siento mal</strong>
+                    <small>Necesito ayuda con mi salud</small>
+                </button>
+
+
+                <button class="opcion" onclick="mostrarSituacion('perdido')">
+                    <span>🎒</span>
+                    <strong>Perdí algo</strong>
+                    <small>No encuentro uno de mis objetos</small>
+                </button>
+
+
+                <button class="opcion" onclick="mostrarSituacion('academico')">
+                    <span>📚</span>
+                    <strong>Tengo un problema académico</strong>
+                    <small>Necesito ayuda con una materia</small>
+                </button>
+
+
+                <button class="opcion" onclick="mostrarSituacion('orientacion')">
+                    <span>🧑‍🏫</span>
+                    <strong>Necesito orientación</strong>
+                    <small>Quiero hablar con alguien</small>
+                </button>
+
+
+                <button class="opcion emergencia" onclick="mostrarSituacion('emergencia')">
+                    <span>🚨</span>
+                    <strong>Es una emergencia</strong>
+                    <small>Necesito ayuda inmediatamente</small>
+                </button>
+
+
+                <button class="opcion" onclick="mostrarSituacion('otra')">
+                    <span>💬</span>
+                    <strong>Es otra situación</strong>
+                    <small>No encuentro mi situación</small>
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- PANTALLA DE RESULTADO -->
+        <section id="resultado" class="pantalla">
+
+            <div class="resultado-contenido">
+
+                <div id="iconoResultado" class="icono-grande">
+                    🏥
+                </div>
+
+                <h2 id="tituloResultado">
+                    Me siento mal
+                </h2>
+
+                <p id="textoResultado">
+                    Aquí aparecerá la información.
+                </p>
+
+
+                <div class="tarjeta-ayuda">
+
+                    <h3>¿Qué puedes hacer?</h3>
+
+                    <ol id="pasosResultado">
+                        <!-- JavaScript agregará los pasos -->
+                    </ol>
+
+                </div>
+
+
+                <div class="lugar-ayuda">
+
+                    <h3>📍 ¿A dónde puedes acudir?</h3>
+
+                    <p id="lugarResultado">
+                        Enfermería - Bloque B
+                    </p>
+
+                </div>
+
+
+                <button class="boton-volver" onclick="volverInicio()">
+                    ← Volver al inicio
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+
+        <p>
+            Proyecto de Digitales
+        </p>
+
+        <p>
+            Creado por <strong>Valentina Ahumada</strong>
+        </p>
+
+        <p class="nota">
+            Esta herramienta es una guía informativa y no reemplaza
+            los protocolos oficiales de la institución.
+        </p>
+
+    </footer>
+
+
+    <!-- Conexión con JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
